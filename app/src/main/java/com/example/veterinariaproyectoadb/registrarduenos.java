@@ -30,12 +30,12 @@ public class registrarduenos extends AppCompatActivity {
             }
         });
 
-        /*btAbrirBusqueda.setOnClickListener(new View.OnClickListener() {
+        btAbrirBusqueda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), buscarClientes.class));
+                startActivity(new Intent(getApplicationContext(), buscarduenos.class));
             }
-        });*/
+        });
     }
     private void validarCampos(){
         String apellidos, nombres, fechanacimiento, telefono, email, direccion;
@@ -121,7 +121,6 @@ public class registrarduenos extends AppCompatActivity {
 
         btRegistrarDueños = findViewById(R.id.btRegistrarDueños);
         btAbrirBusqueda = findViewById(R.id.btAbrirBusqueda);
-
 
 
     }
