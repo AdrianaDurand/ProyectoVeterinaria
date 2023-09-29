@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btAbrirLista"
+        android:id="@+id/btAbrirListaDuenos"
         android:text="Listar Dueños"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

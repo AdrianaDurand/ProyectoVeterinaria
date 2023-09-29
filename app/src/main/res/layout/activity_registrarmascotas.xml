@@ -28,20 +28,27 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/etColorMascota"
+        android:hint="Color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etEdadMascota"
+        android:hint="Edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
         android:id="@+id/etRazaMascota"
         android:hint="Raza"
+        android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/etTipoMascota"
-        android:hint="Tipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/etColorMascota"
-        android:hint="Color"
+        android:hint="Sexo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

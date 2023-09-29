@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class registrarduenos extends AppCompatActivity {
     EditText etApellidos, etNombres, etFechanac, etTelefono, etEmail, etDireccion;
-    Button btRegistrarDueños, btAbrirBusqueda, btAbrirLista;
+    Button btRegistrarDueños, btAbrirBusqueda, btAbrirListaDuenos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,13 @@ public class registrarduenos extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), buscarduenos.class));
+            }
+        });
+
+        btAbrirListaDuenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), listarduenos.class));
             }
         });
     }
@@ -121,6 +128,7 @@ public class registrarduenos extends AppCompatActivity {
 
         btRegistrarDueños = findViewById(R.id.btRegistrarDueños);
         btAbrirBusqueda = findViewById(R.id.btAbrirBusqueda);
+        btAbrirListaDuenos = findViewById(R.id.btAbrirListaDuenos);
 
 
     }

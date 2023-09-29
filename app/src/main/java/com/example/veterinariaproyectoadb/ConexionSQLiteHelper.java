@@ -13,9 +13,10 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
             "CREATE TABLE 'mascotas'(" +
             "'idmascota'       INTEGER NOT NULL," +
             "'nombremascota'           TEXT NOT NULL," +
+            "'color'           TEXT NOT NULL," +
+            "'edad'           TEXT NOT NULL," +
             "'raza'           TEXT NOT NULL," +
             "'tipo'           TEXT NOT NULL," +
-            "'color'           TEXT NOT NULL," +
             "'peso'           TEXT NOT NULL," +
             "'altura'           TEXT NOT NULL," +
             "PRIMARY KEY     ('idmascota' AUTOINCREMENT)"+

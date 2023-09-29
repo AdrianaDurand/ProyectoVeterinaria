@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class registrarmascotas extends AppCompatActivity {
-    EditText etNombreMascota, etRazaMascota, etTipoMascota, etPesoMascota, etAlturaMascota, etColorMascota;
+    EditText etNombreMascota, etRazaMascota, etTipoMascota, etPesoMascota, etAlturaMascota, etColorMascota, etEdadMascota;
     Button btRegistrarMascota, btAbrirBusquedaMascota, btAbrirListaMascota;
 
     @Override
@@ -34,24 +34,25 @@ public class registrarmascotas extends AppCompatActivity {
         btAbrirBusquedaMascota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), buscarduenos.class));
+                startActivity(new Intent(getApplicationContext(), buscarmascota.class));
             }
         });
     }
 
     private void validarCampos() {
         String nombremascota, raza, tipo, color;
-        int peso, altura;
+        int peso, altura, edad;
 
         nombremascota = etNombreMascota.getText().toString();
+        color = etColorMascota.getText().toString();
         raza = etRazaMascota.getText().toString();
         tipo = etTipoMascota.getText().toString();
-        color = etColorMascota.getText().toString();
+        edad = (etEdadMascota.getText().toString().trim().isEmpty()) ? 0 : Integer.parseInt(etEdadMascota.getText().toString());
         peso = (etPesoMascota.getText().toString().trim().isEmpty()) ? 0 : Integer.parseInt(etPesoMascota.getText().toString());
         altura = (etAlturaMascota.getText().toString().trim().isEmpty()) ? 0 : Integer.parseInt(etAlturaMascota.getText().toString());
 
 
-        if (nombremascota.isEmpty() || raza.isEmpty() || tipo.isEmpty() || color.isEmpty() || peso == 0 || altura == 0) {
+        if (nombremascota.isEmpty() || raza.isEmpty() || tipo.isEmpty() || color.isEmpty() || peso == 0 || altura == 0 || edad == 0) {
             notificar("Complete el formulario");
             etNombreMascota.requestFocus();
         } else {
@@ -89,9 +90,10 @@ public class registrarmascotas extends AppCompatActivity {
 
         ContentValues parametros = new ContentValues();
         parametros.put("nombremascota", etNombreMascota.getText().toString());
+        parametros.put("color", etColorMascota.getText().toString());
+        parametros.put("edad", etEdadMascota.getText().toString());
         parametros.put("raza", etRazaMascota.getText().toString());
         parametros.put("tipo", etTipoMascota.getText().toString());
-        parametros.put("color", etColorMascota.getText().toString());
         parametros.put("peso", etPesoMascota.getText().toString());
         parametros.put("altura", etAlturaMascota.getText().toString());
 
@@ -104,9 +106,10 @@ public class registrarmascotas extends AppCompatActivity {
 
     private void reiniciar(){
         etNombreMascota.setText(null);
+        etColorMascota.setText(null);
+        etEdadMascota.setText(null);
         etRazaMascota.setText(null);
         etTipoMascota.setText(null);
-        etColorMascota.setText(null);
         etPesoMascota.setText(null);
         etAlturaMascota.setText(null);
     }
@@ -117,9 +120,10 @@ public class registrarmascotas extends AppCompatActivity {
 
     private void loadUI() {
         etNombreMascota = findViewById(R.id.etNombreMascota);
+        etColorMascota = findViewById(R.id.etColorMascota);
+        etEdadMascota = findViewById(R.id.etEdadMascota);
         etRazaMascota = findViewById(R.id.etRazaMascota);
         etTipoMascota = findViewById(R.id.etTipoMascota);
-        etColorMascota = findViewById(R.id.etColorMascota);
         etPesoMascota = findViewById(R.id.etPesoMascota);
         etAlturaMascota = findViewById(R.id.etAlturaMascota);
 
