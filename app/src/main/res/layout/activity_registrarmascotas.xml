@@ -40,6 +40,12 @@
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:id="@+id/etColorMascota"
+        android:hint="Color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
         android:id="@+id/etPesoMascota"
         android:hint="Peso (kg)"
         android:inputType="phone"
@@ -50,12 +56,6 @@
         android:id="@+id/etAlturaMascota"
         android:hint="Altura (cm)"
         android:inputType="phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/etColorMascota"
-        android:hint="Color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

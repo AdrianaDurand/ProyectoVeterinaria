@@ -12,11 +12,12 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     final String MASCOTAS = "" +
             "CREATE TABLE 'mascotas'(" +
             "'idmascota'       INTEGER NOT NULL," +
-            "'nombre'           TEXT NOT NULL," +
-            "'tipo'           TEXT NOT NULL," +
+            "'nombremascota'           TEXT NOT NULL," +
             "'raza'           TEXT NOT NULL," +
-            "'peso'           TEXT NOT NULL," +
+            "'tipo'           TEXT NOT NULL," +
             "'color'           TEXT NOT NULL," +
+            "'peso'           TEXT NOT NULL," +
+            "'altura'           TEXT NOT NULL," +
             "PRIMARY KEY     ('idmascota' AUTOINCREMENT)"+
             ")";
 
