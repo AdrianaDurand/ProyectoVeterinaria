@@ -12,13 +12,13 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     final String MASCOTAS = "" +
             "CREATE TABLE 'mascotas'(" +
             "'idmascota'       INTEGER NOT NULL," +
-            "'nombremascota'           TEXT NOT NULL," +
+            "'nombremascota'   TEXT NOT NULL," +
             "'color'           TEXT NOT NULL," +
-            "'edad'           TEXT NOT NULL," +
+            "'edad'           INTEGER NOT NULL," +
             "'raza'           TEXT NOT NULL," +
             "'tipo'           TEXT NOT NULL," +
-            "'peso'           TEXT NOT NULL," +
-            "'altura'           TEXT NOT NULL," +
+            "'peso'           INTEGER NOT NULL," +
+            "'altura'           INTEGER NOT NULL," +
             "PRIMARY KEY     ('idmascota' AUTOINCREMENT)"+
             ")";
 
@@ -29,7 +29,7 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
             "'apellidos'        TEXT NOT NULL," +
             "'nombres'          TEXT NOT NULL," +
             "'fechanacimiento'  TEXT NOT NULL," +
-            "'telefono'         TEXT NOT NULL," +
+            "'telefono'         INTEGER NOT NULL," +
             "'email'            TEXT NOT NULL," +
             "'direccion'        TEXT NOT NULL," +
             "PRIMARY KEY     ('iddueno' AUTOINCREMENT)"+

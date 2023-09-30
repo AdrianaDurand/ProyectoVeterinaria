@@ -13,6 +13,9 @@
         android:theme="@style/Theme.VeterinariaProyectoADB"
         tools:targetApi="31">
         <activity
+            android:name=".listarMascotas"
+            android:exported="false" />
+        <activity
             android:name=".buscarmascota"
             android:exported="false" />
         <activity

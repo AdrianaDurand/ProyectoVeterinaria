@@ -37,6 +37,13 @@ public class registrarmascotas extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), buscarmascota.class));
             }
         });
+
+        btAbrirListaMascota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), listarMascotas.class));
+            }
+        });
     }
 
     private void validarCampos() {
@@ -129,6 +136,7 @@ public class registrarmascotas extends AppCompatActivity {
 
         btRegistrarMascota = findViewById(R.id.btRegistrarMascota);
         btAbrirBusquedaMascota = findViewById(R.id.btAbrirBusquedaMascota);
+        btAbrirListaMascota = findViewById(R.id.btAbrirListaMascota);
 
     }
 

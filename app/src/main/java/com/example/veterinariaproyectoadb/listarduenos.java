@@ -57,7 +57,7 @@ public class listarduenos extends AppCompatActivity {
             persona.setApellidos(cursor.getString(1));
             persona.setNombres(cursor.getString(2));
             persona.setFechanacimiento(cursor.getString(3));
-            persona.setTelefono(cursor.getString(4));
+            persona.setTelefono(cursor.getInt(4));
             persona.setEmail(cursor.getString(5));
             persona.setDireccion(cursor.getString(6));
 

@@ -5,10 +5,9 @@ public class Persona {
     private String apellidos;
     private String nombres;
     private String fechanacimiento;
-    private String telefono;
+    private int telefono;
     private String email;
     private String direccion;
-
 
     public int getIddueno() {
         return iddueno;
@@ -42,11 +41,11 @@ public class Persona {
         this.fechanacimiento = fechanacimiento;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 
@@ -65,12 +64,4 @@ public class Persona {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
-
-
-
-
-
-
-
 }
